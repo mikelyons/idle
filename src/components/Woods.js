@@ -13,8 +13,6 @@ class Woods extends Component {
 	}
 
 	chopWood(){
-		// increment water
-		// alert('WHERE IS THE WATER');
 		this.setState({ wood: this.state.wood + 1 });
 	}
 

@@ -6,11 +6,9 @@ import '../App.css';
 class Logo extends Component {
   render() {
     return (
-      <div>
+      <div className="Logo">
         <img src={buddha} className="App-logo" alt="logo" />
         <p> Click to Start the game. </p>
-
-          Start the Game.
       </div>
     );
   }

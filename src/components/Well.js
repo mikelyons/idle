@@ -10,12 +10,12 @@ class Well extends Component {
 		};
 
 		// This binding is necessary to make `this` work in the callback
-		this.carryWater = this.carryWater.bind(this);
+		// if the function is not an => function
+		// this.carryWater = this.carryWater.bind(this);
 	}
 
-	carryWater(){
+	carryWater = () => {
 		// increment water
-		// alert('WHERE IS THE WATER');
 		this.setState({ water: this.state.water + 1 });
 	}
 

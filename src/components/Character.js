@@ -16,6 +16,14 @@ class Character extends Component {
   render() {
     return (
       <div className="Character">
+        <form>
+          <label>
+            Name:
+            <input type="text" name="name" />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+        
         <ul>
           <li>
             <label>Nama :</label> <strong>{this.props.name}</strong>
