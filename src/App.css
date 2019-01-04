@@ -1,21 +1,71 @@
+/* UL reset */
+ul {
+  list-style: none;
+  text-align: left;
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+body {
+  background-color: #eee; 
+}
+
 .App {
   text-align: center;
 }
 
+.Wallet {
+  border: solid red 1px;
+  float: left;
+  height: 20vh;
+  width: 20vw;
+}
+
+.Character {
+  border: solid blue 1px;
+  float: left;
+  height: 20vh;
+  width: 20vw;
+}
+
+
+.Well {
+  border: solid green 1px;
+  float: right;
+  height: 20vh;
+  width: 20vw;
+}
+
+.hideable>
+
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 20vmin;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  /*min-height: 10vh;*/
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.splash-text {
+  color: yellow;
+  font-size: 12pt;
+  position: relative;
+  top: 30px;
+  left:-100px;
+  transform: rotate(-20deg);
 }
 
 .App-link {
@@ -30,3 +80,13 @@
     transform: rotate(360deg);
   }
 }
+
+h1 {height: 100px;
+    background-color: #333;
+    color: whitesmoke;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
