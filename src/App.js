@@ -14,6 +14,8 @@ import Karma from './components/Karma.js'
 
 import Character from './components/Character.js';
 
+import MessageHistory from './components/MessageHistory.js'
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -24,15 +26,19 @@ class App extends Component {
       name: "Anonymous",
       date: new Date(),
       elapsedTime: 0,
+      clicks: 0,
+      messages: [],
     }
 
-    // this used to be necessary until we started using => functions
-    // this.updateWater = this.updateWater.bind(this);
-    // this.updateWood = this.updateWood.bind(this);
-    // this.updateElapsedTime= this.updateElapsedTime.bind(this);
-
-    console.log(this.props)
-    setInterval(this.updateWater, 10000);
+    setInterval(()=>{this.updateWater(-1)}, 15000);
+  }
+  updateMessages = (message) => {
+    console.log(this.state.messages)
+    console.log(message)
+    let messageArray = this.state.messages
+    messageArray.push(message)
+    console.log(messageArray)
+    this.setState({messages: messageArray})
   }
   updateElapsedTime = () => {
     console.log(this.state.elapsedTime);
@@ -45,18 +51,35 @@ class App extends Component {
     var seconds = Math.round(timeDiff);
     console.log(seconds + " seconds");
   }
-  updateWater = () => {
-    this.setState({ water: this.state.water + 1 });
-    console.log("+ water "+this.state.water);
+  updateWater = (amount) => {
+    amount = parseInt(amount) || 1
+    this.setState({ water: this.state.water + amount });
+    console.log("water+ " + amount + " totel: "+this.state.water);
     this.updateElapsedTime()
+    this.updateMessages("ahh a nice refreshing drink")
   }
   updateWood = () => {
     this.setState({ wood: this.state.wood + 1 });
     console.log("+ wood "+this.state.wood)
     this.updateElapsedTime()
+    this.updateMessages("More wood for the fire")
   }
   updateKarma = () => {
     this.setState({ karma: this.state.karma+this.state.elapsedTime})
+  }
+  countClick = () => {
+    this.setState({clicks: this.state.clicks+1})
+  }
+  componentDidMount() {
+    document.addEventListener('mousedown', this.countClick);
+  }
+  messagesHistory() {
+    return {
+      clear: 'both',
+      height: 300,
+      border: 'solid',
+      overflow: 'hidden'
+    }
   }
   render() {
     return (
@@ -70,23 +93,41 @@ class App extends Component {
 
         <main>
           <div className="main-row">
-            <div className="column left-sidebar">left</div>
-            <div className="column col-center">
+            <div className="column left-sidebar">
+              <h3>Character</h3>
 
               <Character name={this.state.name}
                 water={this.state.water} 
                 wood={this.state.wood}
-                elapsedTime={this.state.elapsedTime} />
-        <Logo />
-
+                karma={this.state.karma}
+                elapsedTime={this.state.elapsedTime} 
+                clicks={this.state.clicks}
+              />
               <Wallet />
+            </div>
+            <div className="column col-center">
               <Well updateWater={this.updateWater} water={this.state.water} />
               <Woods updateWood={this.updateWood} wood={this.state.wood} />
               <Karma updateKarma={this.updateKarma} karma={this.state.karma} />
+              <MessageHistory style={this.messagesHistory()} messages={this.state.messages}></MessageHistory>
             </div>
 
             <div className="column right-sidebar">right</div>
 
+          </div>
+          <div className="main-row">
+            <div className="column left-sidebar">left</div>
+            <div className="column col-center">
+              <Logo />
+            </div>
+            <div className="column right-sidebar">right</div>
+          </div>
+          <div className="main-row">
+            <div className="column left-sidebar">left</div>
+            <div className="column col-center">
+            <h3>this will have inner world</h3>
+            </div>
+            <div className="column right-sidebar">right</div>
           </div>
         </main>
 

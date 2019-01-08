@@ -14,9 +14,12 @@ class Character extends Component {
 
 
   render() {
+    let hide = {display: 'none'}
+    let show = {display: 'block'}
+
     return (
       <div className="Character">
-        <form>
+        <form style={hide}>
           <label>
             Name:
             <input type="text" name="name" />
@@ -26,14 +29,15 @@ class Character extends Component {
         
         <ul>
           <li>
-            <label>Nama :</label> <strong>{this.props.name}</strong>
-            <label>Nama :</label> <button>{this.props.name}</button>
+            <button>{this.props.name}</button>
           </li>
 
           <li>Water : {this.props.water}</li>
           <li>Wood : {this.props.wood}</li>
+          <li>Karma : {this.props.karma}</li>
+          <li>Age : <ElapsedTimeInSeconds elapsedTime={this.props.elapsedTime} /> seconds </li>
+          <li>Clicks : {this.props.clicks}</li>
         </ul>
-        <ElapsedTimeInSeconds elapsedTime={this.props.elapsedTime} />
       </div>
     );
   }
