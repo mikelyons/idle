@@ -13,15 +13,13 @@ class MessageHistory extends Component {
   render() {
 
     var numbers = this.props.messages
-    console.log(numbers)
     this.listItems = numbers.slice(0).reverse().map((number) =>
       <li>{number}</li>
     );
-    console.log(this.listItems)
     return (
       <div style={this.props.style} className="MessagesHistory-container">
         <p>Messages will list here</p>
-        <p style={{overflow: 'hidden'}}>{this.listItems}</p>
+        <ul style={{overflow: 'hidden'}}>{this.listItems}</ul>
       </div>
     );
   }

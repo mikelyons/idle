@@ -9,11 +9,9 @@ class Header extends Component {
 			hidden: true
 		};
 
-		// This binding is necessary to make `this` work in the callback
-		this.hide = this.hide.bind(this);
 	}
 
-	hide() {
+	hide = () => {
 		console.log('raint');
 		this.setState({ hidden: !this.state.hidden });
 	}
