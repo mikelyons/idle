@@ -4,7 +4,7 @@ I started this as a way to refresh and learn more about React and related librar
 
 What I have learned so far
 ---
-* yarn as the new package manager/script runner
+
 
 To Try it out
 ---

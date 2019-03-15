@@ -1,0 +1,5 @@
+[0108/131353.611:ERROR:process_info.cc(329)] VirtualQueryEx: Access is denied. (0x5)
+[0108/131353.612:ERROR:process_info.cc(550)] ReadMemoryInfo failed
+[0108/131353.620:ERROR:process_reader_win.cc(108)] process 10996 not found
+[0108/131353.620:ERROR:exception_snapshot_win.cc(88)] thread ID 28108 not found in process
+[0108/131353.620:ERROR:scoped_process_suspend.cc(40)] NtResumeProcess: An attempt was made to access an exiting process. (0xc000010a)

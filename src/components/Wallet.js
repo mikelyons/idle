@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css';
+// import '../styles/App.css';
 
 class Wallet extends Component {
   constructor(props) {

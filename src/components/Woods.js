@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../App.css';
 
 class Woods extends Component {
 	constructor (props) {

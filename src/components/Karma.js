@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../App.css';
 
 class Karma extends Component {
   constructor(props) {

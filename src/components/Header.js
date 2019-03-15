@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import '../App.css';
 import GoodMorningNight from '../components/time/GoodMorningNight.js';
 
 class Header extends Component {
@@ -22,7 +21,7 @@ class Header extends Component {
   	if (this.state.hidden) {
   		hideables = <div className="hideable">
 	      	<p className="splash-text" onClick={this.hide}><GoodMorningNight /></p>
-	        <h1>Raint: The Game</h1>
+	        <h1>Chop Wood, Carry Water: The Game</h1>
         </div>
   	} else {
   		hideables = <p></p>

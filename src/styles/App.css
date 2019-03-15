@@ -1,0 +1,165 @@
+/* UL reset */
+ul {
+  text-align: left;
+  display: block;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+  list-style: none;
+}
+li {
+  padding-top: 5px;
+  border-bottom: solid black 1px;
+}
+
+body {
+  background-color: #eee; 
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+}
+
+.col-center {
+  border-left: dotted grey 1px;
+  width: 75%;
+}
+.left-sidebar, .right-sidebar {}
+.left-sidebar{width:25%;}
+.right-sidebar{width: 0%}
+
+.main-row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.main-row > * {
+  height: 420px;
+  text-align: center;
+  overflow: hidden;
+}
+.main-row {
+  background-color: #ccc;
+}
+.column {
+  float: left;
+}
+
+.Wallet {
+  float: left;
+}
+.Character {
+  border: solid white 1px;
+  padding: 20px;
+  float: left;
+}
+.Well {
+  border: solid green 1px;
+  float: right;
+/*  height: 20vh;
+  width: 20vw;
+*/}
+.Karma {
+  padding: 20px;
+  border: solid white 1px;
+  float: left;
+}
+
+.App-header {
+  background-color: #282c34;
+  /*min-height: 10vh;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.splash-text {
+  color: yellow;
+  font-size: 12pt;
+  position: relative;
+  top: 30px;
+  left:-100px;
+  transform: rotate(-20deg);
+}
+
+.App-link {
+  color: #61dafb;
+}
+.App-logo {
+  box-sizing: border-box;
+  animation: App-logo-spin infinite 20s linear;
+  height: 20vh;
+  width: auto;
+}
+.Logo {
+  overflow: hidden;
+  float: right;
+}
+
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+h1 {height: 100px;
+    background-color: #333;
+    color: whitesmoke;
+    margin-bottom: 15px;
+    text-align: center;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+/* * {
+  border: solid white 1px;
+} */
+
+/* vvv -- Used for Mario Star Effect */
+
+@-webkit-keyframes rainbow {
+  0% {color: hsl(123, 100%, 22%);}
+  100% {color: hsl(118, 100%, 50%);}
+}
+
+h1 {  -webkit-animation: rainbow 1000ms infinite alternate;
+}
+
+/* ^^^  --  Used for Mario Star Effect */
+
+/* funky yin yang background for rewards */
+.yinyang {
+  background:
+radial-gradient(circle at 50% 59%, #D2CAAB 3%, #364E27 4%, #364E27 11%, rgba(54,78,39,0) 12%, rgba(54,78,39,0)) 50px 0,
+radial-gradient(circle at 50% 41%, #364E27 3%, #D2CAAB 4%, #D2CAAB 11%, rgba(210,202,171,0) 12%, rgba(210,202,171,0)) 50px 0,
+radial-gradient(circle at 50% 59%, #D2CAAB 3%, #364E27 4%, #364E27 11%, rgba(54,78,39,0) 12%, rgba(54,78,39,0)) 0 50px,
+radial-gradient(circle at 50% 41%, #364E27 3%, #D2CAAB 4%, #D2CAAB 11%, rgba(210,202,171,0) 12%, rgba(210,202,171,0)) 0 50px,
+radial-gradient(circle at 100% 50%, #D2CAAB 16%, rgba(210,202,171,0) 17%),
+radial-gradient(circle at 0% 50%, #364E27 16%, rgba(54,78,39,0) 17%),
+radial-gradient(circle at 100% 50%, #D2CAAB 16%, rgba(210,202,171,0) 17%) 50px 50px,
+radial-gradient(circle at 0% 50%, #364E27 16%, rgba(54,78,39,0) 17%) 50px 50px;
+background-color:#63773F;
+background-size:100px 100px;
+}
