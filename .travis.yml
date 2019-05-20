@@ -15,7 +15,7 @@ cache:
 env:
   global:
   - KEY_ONE=$REACT_APP_ENV
-  - KEY_TWO=$(if [ "$REACT_APP_ENV" = "stage" ]; then echo ${TRAVIS_BRANCH//\//-}; else echo "RAINT"; fi)
+  - KEY_TWO=$(echo "RAINT";)
 
 
 deploy:
