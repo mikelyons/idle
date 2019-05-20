@@ -14,7 +14,7 @@ cache:
 
 env:
   global:
-  - KEY_ONE="one"
+  - KEY_ONE=$REACT_APP_ENV
 
 deploy:
   ####   DEPLOYMENT    ####
