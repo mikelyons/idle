@@ -23,7 +23,7 @@ deploy:
     skip_cleanup: true
     env:
       global:
-      - KEY_ONE=one
+      - KEY_ONE="one"
     on:
       all_branches: true
       # branch: travis 
