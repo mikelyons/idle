@@ -2,12 +2,6 @@ import React, { Component } from 'react';
 
 
 class MessageHistory extends Component {
-  constructor(props){
-    super(props)
-
-    // const numbers = [1, 2, 3, 4, 5, 666, 7, 8, 9, 10]
-  }
-
 
   render() {
 

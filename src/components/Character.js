@@ -15,7 +15,7 @@ class Character extends Component {
 
   render() {
     let hide = {display: 'none'}
-    let show = {display: 'block'}
+    // let show = {display: 'block'}
 
     return (
       <div className="Character">
