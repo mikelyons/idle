@@ -17,6 +17,8 @@ env:
   - KEY_ONE=$REACT_APP_ENV
   - KEY_TWO=$(echo "RAINT";)
 
+before_install: echo ${REACT_APP_ENV}
+
 
 deploy:
   ####   DEPLOYMENT    ####
