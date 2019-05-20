@@ -1,0 +1,41 @@
+sudo: required
+dist: trusty
+language: node_js
+node_js:
+- '8'
+script:
+- npm run lint
+- npm run test
+- npm run build
+cache:
+  yarn: true
+  directories:
+  - node_modules
+
+deploy:
+  ####   PRODUCTION DEPLOYMENT    ####
+  - provider: s3
+    access_key_id: $PRODUCTION_AWS_ACCESS_KEY
+    secret_access_key: $PRODUCTION_AWS_SECRET
+    local_dir: build
+    skip_cleanup: true
+    on:
+      branch: master
+  ####   UAT DEPLOYMENT    ####
+  - provider: s3
+    access_key_id: $DEVELOPMENT_AWS_ACCESS_KEY
+    secret_access_key: $DEVELOPMENT_AWS_SECRET
+    local_dir: build
+    skip_cleanup: true
+    on:
+      branch: uat
+  ####   DEVELOP DEPLOYMENT    ####
+  - provider: s3
+    access_key_id: $DEVELOPMENT_AWS_ACCESS_KEY
+    secret_access_key: $DEVELOPMENT_AWS_SECRET
+    local_dir: build
+    skip_cleanup: true
+    env:
+      - 
+    on:
+      branch: develop
