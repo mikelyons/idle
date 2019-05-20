@@ -18,10 +18,12 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET
     bucket: idle-clicker
+    region: us-west-2
     local_dir: build
     skip_cleanup: true
     env:
-      - KEY_ONE=one KEY_TWO=two
+      global:
+        - KEY_ONE=one KEY_TWO=two
     on:
       all_branches: true
       # branch: travis 
