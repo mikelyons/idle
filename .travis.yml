@@ -15,8 +15,9 @@ cache:
 deploy:
   ####   DEPLOYMENT    ####
   - provider: s3
-    access_key_id: $DEVELOPMENT_AWS_ACCESS_KEY
-    secret_access_key: $DEVELOPMENT_AWS_SECRET
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: $AWS_SECRET
+    bucket: idle-clicker
     local_dir: build
     skip_cleanup: true
     env:
