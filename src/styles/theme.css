@@ -1,0 +1,139 @@
+/* CSS Variable Theme System - Dark Mode */
+:root {
+  /* Base colors - Dark theme */
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --bg-header: #0f0f1a;
+  --bg-dark: #0a0a14;
+  --bg-card: #1f1f3a;
+
+  --text-primary: #e0e0e0;
+  --text-light: #ffffff;
+  --text-muted: #888899;
+
+  --accent-primary: #61dafb;
+  --accent-success: #27ae60;
+  --accent-warning: #f1c40f;
+
+  --border-light: #2a2a4a;
+  --border-dark: #0a0a14;
+  --border-muted: #3a3a5a;
+
+  /* Enlightenment specific */
+  --karma-color: #9b59b6;
+  --progress-bg: #2a2a4a;
+  --progress-fill: #9b59b6;
+
+  /* Transitions */
+  --theme-transition: all 0.5s ease;
+}
+
+/* Stage 0: Mundane - Dark slate */
+.stage-0 {
+  --bg-primary: #1a1a2e;
+  --bg-secondary: #16213e;
+  --bg-card: #1f1f3a;
+  --karma-color: #5a6068;
+  --progress-fill: #5a6068;
+}
+
+/* Stage 1: Seeker - Warm ember glow */
+.stage-1 {
+  --bg-primary: #1f1a14;
+  --bg-secondary: #2a2318;
+  --bg-card: #2f281f;
+  --karma-color: #c4956a;
+  --progress-fill: #c4956a;
+}
+
+/* Stage 2: Student - Deep ocean blue */
+.stage-2 {
+  --bg-primary: #0f1a20;
+  --bg-secondary: #142833;
+  --bg-card: #1a3040;
+  --karma-color: #4a9ebe;
+  --progress-fill: #4a9ebe;
+}
+
+/* Stage 3: Practitioner - Forest depths */
+.stage-3 {
+  --bg-primary: #0f1a14;
+  --bg-secondary: #142818;
+  --bg-card: #1a3020;
+  --karma-color: #2ecc71;
+  --progress-fill: #2ecc71;
+}
+
+/* Stage 4: Adept - Ancient gold */
+.stage-4 {
+  --bg-primary: #1a1810;
+  --bg-secondary: #282414;
+  --bg-card: #302a1a;
+  --karma-color: #d4ac0d;
+  --progress-fill: #d4ac0d;
+}
+
+/* Stage 5: Illumined - Deep violet */
+.stage-5 {
+  --bg-primary: #1a141f;
+  --bg-secondary: #261a2e;
+  --bg-card: #2f2040;
+  --karma-color: #a66bbe;
+  --progress-fill: #a66bbe;
+}
+
+/* Stage 6: Awakened - Cosmic indigo */
+.stage-6 {
+  --bg-primary: #12121f;
+  --bg-secondary: #1a1a30;
+  --bg-card: #222240;
+  --karma-color: #6c6fbe;
+  --progress-fill: #6c6fbe;
+}
+
+/* Stage 7: Enlightened - Transcendent dark radiance */
+.stage-7 {
+  --bg-primary: #0f0f1a;
+  --bg-secondary: #1a1a2e;
+  --bg-card: #1f1f3a;
+  --karma-color: #ff6b9d;
+  --progress-fill: linear-gradient(90deg, #ff6b6b, #ffd93d, #6bcb77, #4d96ff, #9b59b6);
+  animation: enlightened-glow 3s ease-in-out infinite;
+}
+
+.stage-7 .main-row {
+  background: linear-gradient(135deg,
+    rgba(255, 107, 107, 0.05) 0%,
+    rgba(255, 217, 61, 0.05) 25%,
+    rgba(107, 203, 119, 0.05) 50%,
+    rgba(77, 150, 255, 0.05) 75%,
+    rgba(155, 89, 182, 0.05) 100%
+  );
+}
+
+@keyframes enlightened-glow {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.1);
+  }
+}
+
+/* Meditation styles */
+.meditating {
+  animation: meditation-pulse 2s ease-in-out infinite;
+}
+
+@keyframes meditation-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.meditation-active .App-header {
+  background: linear-gradient(180deg, var(--bg-header) 0%, #1a1a30 100%);
+}

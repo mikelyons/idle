@@ -4,8 +4,8 @@ import React, { Component } from 'react';
 class Footer extends Component {
   render() {
     return (
-      <div className="App">
-	      <h1>SOMETHING TO GET EXCITED ABOUT!</h1>
+      <div className="Footer">
+        <p>Chop Wood, Carry Water</p>
       </div>
     );
   }

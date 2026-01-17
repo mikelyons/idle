@@ -1,21 +1,22 @@
 import React, { Component } from 'react';
-//import '../styles/App.css';
 
 import ElapsedTimeInSeconds from '../components/time/ElapsedTimeInSeconds.js';
 
 class Character extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      name: this.props.name
-    }
-  }
-
-
-
   render() {
+    const {
+      name,
+      water,
+      wood,
+      karma,
+      elapsedTime,
+      clicks,
+      dayNumber,
+      currentEnergy,
+      maxEnergy
+    } = this.props;
+
     let hide = {display: 'none'}
-    let show = {display: 'block'}
 
     return (
       <div className="Character">
@@ -26,17 +27,18 @@ class Character extends Component {
           </label>
           <input type="submit" value="Submit" />
         </form>
-        
+
         <ul>
           <li>
-            <button>{this.props.name}</button>
+            <button>{name}</button>
           </li>
-
-          <li>Water : {this.props.water}</li>
-          <li>Wood : {this.props.wood}</li>
-          <li>Karma : {this.props.karma}</li>
-          <li>Age : <ElapsedTimeInSeconds elapsedTime={this.props.elapsedTime} /> seconds </li>
-          <li>Clicks : {this.props.clicks}</li>
+          <li>Day: {dayNumber}</li>
+          <li>Energy: {Math.floor(currentEnergy)} / {maxEnergy}</li>
+          <li>Water: {water}</li>
+          <li>Wood: {wood}</li>
+          <li>Karma: {Math.floor(karma)}</li>
+          <li>Age: <ElapsedTimeInSeconds elapsedTime={elapsedTime} /> seconds </li>
+          <li>Clicks: {clicks}</li>
         </ul>
       </div>
     );

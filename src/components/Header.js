@@ -13,6 +13,9 @@ class Header extends Component {
 	hide = () => {
 		console.log('raint');
 		this.setState({ hidden: !this.state.hidden });
+		if (this.props.unlockSeeker) {
+			this.props.unlockSeeker();
+		}
 	}
 
   render() {
